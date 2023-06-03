@@ -7,7 +7,10 @@ void setup() {
 void draw() {
   background(155);
   ball.display();
-  ball.moveUp();
+  ball.move();
+  
+  ball.setdy(10);
+  ball.setdx(5);
   
   //if(y+25 > height || y-25 < 0) {
   //  dy *= -1;
