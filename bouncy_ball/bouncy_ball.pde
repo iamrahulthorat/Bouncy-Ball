@@ -1,15 +1,15 @@
-int x = 100;
-int dx = 5;
+int y = 100;
+int dy = 5;
 
 void setup() {
   size(640, 480);
 }
 
 void draw() {
-  background(155);          // colour denoted by 0 is black, 255 is white, 155 is somewhere in the middle 
-  ellipse(x, 100, 50, 50);
-  x += dx;
-  if(x+25 > width || x-25 < 0) {
-    dx *= -1;
+  background(155);
+  ellipse(500, y, 50, 50);
+  y += dy;
+  if(y+25 > height || y-25 < 0) {
+    dy *= -1;
   }
 }
