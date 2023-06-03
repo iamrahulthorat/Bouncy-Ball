@@ -9,11 +9,12 @@ void draw() {
   ball.display();
   ball.move();
   
-  ball.setdy(10);
-  ball.setdx(5);
+  //ball.setdy(10);
+  //ball.setdx(5);
   
-  //if(y+25 > height || y-25 < 0) {
-  //  dy *= -1;
-  //}
+  if(ball.getY()+25 > height || ball.getY()-25 < 0) {
+    //dy *= -1;
+    ball.setdy( ball.getdy() * -1 );
+  }
   
 }

@@ -11,16 +11,30 @@ public class Ball {
   }
   
   // we need to be able to change dx and dy
-  
- public void setdy(int dy) {
+  public void setdy(int dy) {
    this.dy = dy;
  }
  
- public void setdx(int dx) {
+  public void setdx(int dx) {
    this.dx = dx;
  }
  
   // we need to be able to see where our ball is!
+  public int getdy() {
+    return this.dy;
+  }
+  
+  public int getdx() {
+    return this.dx;
+  }
+  
+  public int getX() {
+    return this.x;
+  }
+  
+  public int getY() {
+    return this.y;
+  }
   
   public void display() {
     ellipse(x, y, size, size);
