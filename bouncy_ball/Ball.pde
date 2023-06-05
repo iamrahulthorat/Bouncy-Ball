@@ -5,6 +5,15 @@ public class Ball {
   private int dx = 0;
   private int size = 50;
   
+  // constructor
+  public Ball(int x, int y, int dx, int dy, int size) {
+    this.x = x;
+    this.y = y;
+    this.dx = dx;
+    this.dy = dy;
+    this.size = size;
+  }
+  
   public void move() {
     y += dy;
     x += dx;
