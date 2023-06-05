@@ -7,25 +7,10 @@ void setup() {
 
 void draw() {
   background(155);
+  
   ball.display();
-  ball.move();
-  
-  //ball.setdy(10);
-  //ball.setdx(5);
-  
-  if(ball.getY()+25 > height || ball.getY()-25 < 0) {
-    //dy *= -1;
-    ball.setdy( ball.getdy() * -1 );
-  }
-  
+  ball.update();
+ 
   ball2.display();
-  ball2.move();
-  
-  //ball.setdy(10);
-  //ball.setdx(5);
-  
-  if(ball2.getY()+25 > height || ball2.getY()-25 < 0) {
-    //dy *= -1;
-    ball2.setdy( ball2.getdy() * -1 );
-  }
+  ball2.update();
 }
