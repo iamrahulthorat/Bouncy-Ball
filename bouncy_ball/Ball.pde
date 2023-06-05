@@ -1,9 +1,13 @@
 public class Ball {
-  private int y = 100;
-  private int x = 400;
-  private int dy = 5;
-  private int dx = 0;
-  private int size = 50;
+  
+  //private int y = 100;
+  //private int x = 400;
+  //private int dy = 5;
+  //private int dx = 0;
+  //private int size = 50;
+  
+  private int y, x, dy, dx, size;
+  private color ballColor = color(255, 0, 0);
   
   // constructor
   public Ball(int x, int y, int dx, int dy, int size) {
@@ -49,6 +53,7 @@ public class Ball {
   }
     
   public void display() {
+    fill(this.ballColor);
     ellipse(x, y, size, size);
   }
 
@@ -82,6 +87,24 @@ public class Ball {
   public int getSize() {
     return this.size;
   }
+  
+  public boolean pointInEllipse(int x, int y) {
+    double distance = Math.sqrt(Math.pow((x - getX()), 2) + Math.pow((y - getY()), 2));
+    if(distance < getSize()/2) {
+      return true;
+    }
+    return false;
+  }
+  
+  public void changeColor() {
+    if (red(this.ballColor) == 255) {
+      this.ballColor = color(0, 255, 0);
+    }
+    else {
+      this.ballColor = color(255, 0, 0);
+    }
+  }
+  
  }
   
   

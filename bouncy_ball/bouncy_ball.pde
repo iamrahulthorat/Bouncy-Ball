@@ -19,3 +19,11 @@ void draw() {
     balls[i].update();
   }
 }
+
+void mousePressed() {
+  for(int i = 0; i < balls.length; i++) {
+    if(balls[i].pointInEllipse(mouseX, mouseY)) {
+      balls[i].changeColor();
+    }
+  }
+}
